@@ -1,0 +1,27 @@
+pacman -Syu  --> close application
+pacman -Su
+
+
+gcc --version
+
+pacman -S wget 
+
+wget http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-gcc-libs-5.1.0-1-any.pkg.tar.xz
+pacman -U mingw-w64-x86_64-gcc-libs-5.1.0-1-any.pkg.tar.xz
+
+wget http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-gcc-5.1.0-1-any.pkg.tar.xz
+pacman -U mingw-w64-x86_64-gcc-5.1.0-1-any.pkg.tar.xz
+
+PATH=/mingw64/bin:$PATH
+
+export PATH=/c/MinGW64.TDM-GCC5.1.0/bin:$PATH
+
+gcc --version
+
+pacman -S git
+pacman -S cmake
+
+pacman -S cmake-gui
+ 
+cd ${package-name}
+MINGW_INSTALLS=mingw64 makepkg-mingw -sLf
